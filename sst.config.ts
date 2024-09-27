@@ -1,11 +1,11 @@
 /// <reference path="./.sst/platform/config.d.ts" />
-
 export default $config({
   app(input) {
     return {
       name: "notes2409",
       removal: input?.stage === "production" ? "retain" : "remove",
       home: "aws",
+      providers: { aws: "6.53.0" },
     };
   },
   async run() {
